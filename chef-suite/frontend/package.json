@@ -1,28 +1,39 @@
 {
-  "name": "chef-suite-frontend",
-  "version": "0.1.0",
-  "private": true,
+  "name": "chef-suite-desktop",
+  "version": "1.0.0",
+  "description": "Chef Suite - Professional Culinary Operations Management",
+  "main": "public/electron.js",
+  "homepage": "./",
+  "author": "Brenham Country Club",
+  "license": "Proprietary",
   "dependencies": {
-    "@testing-library/jest-dom": "^5.17.0",
-    "@testing-library/react": "^13.4.0",
-    "@testing-library/user-event": "^13.5.0",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "react-scripts": "5.0.1",
-    "web-vitals": "^2.1.4",
-    "axios": "^1.6.0",
-    "react-router-dom": "^6.20.0",
-    "@mui/material": "^5.14.0",
-    "@mui/icons-material": "^5.14.0",
     "@emotion/react": "^11.11.0",
     "@emotion/styled": "^11.11.0",
-    "jwt-decode": "^4.0.0"
+    "@mui/icons-material": "^5.14.0",
+    "@mui/material": "^5.14.0",
+    "@mui/x-data-grid": "^6.18.0",
+    "@mui/x-date-pickers": "^6.18.0",
+    "axios": "^1.6.0",
+    "concurrently": "^8.2.0",
+    "dayjs": "^1.11.10",
+    "electron-is-dev": "^2.0.0",
+    "jwt-decode": "^4.0.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.20.0",
+    "react-scripts": "5.0.1",
+    "recharts": "^2.8.0",
+    "wait-on": "^7.2.0"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "electron": "electron .",
+    "electron-dev": "concurrently \"npm start\" \"wait-on http://localhost:3000 && electron .\"",
+    "build-electron": "npm run build && electron-builder",
+    "dist": "npm run build && electron-builder --publish=never"
   },
   "eslintConfig": {
     "extends": [
@@ -42,5 +53,39 @@
       "last 1 safari version"
     ]
   },
-  "proxy": "http://localhost:8000"
+  "devDependencies": {
+    "electron": "^27.0.0",
+    "electron-builder": "^24.6.4"
+  },
+  "build": {
+    "appId": "com.brenhamcc.chefsuite",
+    "productName": "Chef Suite Professional",
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "build/**/*",
+      "node_modules/**/*",
+      "public/electron.js",
+      "public/preload.js"
+    ],
+    "mac": {
+      "category": "public.app-category.business"
+    },
+    "win": {
+      "target": "nsis",
+      "icon": "public/favicon.ico"
+    },
+    "nsis": {
+      "oneClick": false,
+      "perMachine": false,
+      "allowToChangeInstallationDirectory": true,
+      "installerIcon": "public/favicon.ico",
+      "uninstallerIcon": "public/favicon.ico",
+      "installerHeaderIcon": "public/favicon.ico",
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "shortcutName": "Chef Suite Professional"
+    }
+  }
 }

@@ -1,0 +1,35 @@
+<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="512" height="512" rx="64" fill="#2E7D32"/>
+
+  <!-- Chef Hat -->
+  <path d="M256 80C240 80 224 88 224 104V120C224 136 240 144 256 144C272 144 288 136 288 120V104C288 88 272 80 256 80Z" fill="white"/>
+  <rect x="200" y="144" width="112" height="16" fill="white"/>
+  <rect x="216" y="160" width="80" height="8" fill="white"/>
+
+  <!-- Pot/Pan -->
+  <ellipse cx="256" cy="280" rx="120" ry="40" fill="#424242"/>
+  <ellipse cx="256" cy="280" rx="100" ry="25" fill="#616161"/>
+  <ellipse cx="256" cy="280" rx="80" ry="15" fill="#757575"/>
+
+  <!-- Steam lines -->
+  <path d="M200 240 Q190 220 200 200" stroke="white" stroke-width="3" fill="none" opacity="0.7"/>
+  <path d="M230 235 Q220 215 230 195" stroke="white" stroke-width="3" fill="none" opacity="0.7"/>
+  <path d="M260 240 Q270 220 260 200" stroke="white" stroke-width="3" fill="none" opacity="0.7"/>
+  <path d="M290 235 Q300 215 290 195" stroke="white" stroke-width="3" fill="none" opacity="0.7"/>
+  <path d="M320 240 Q310 220 320 200" stroke="white" stroke-width="3" fill="none" opacity="0.7"/>
+
+  <!-- Spoon/Fork -->
+  <rect x="180" y="320" width="8" height="60" fill="#424242"/>
+  <rect x="324" y="320" width="8" height="60" fill="#424242"/>
+  <rect x="176" y="380" width="16" height="20" fill="#424242"/>
+  <rect x="320" y="380" width="16" height="20" fill="#424242"/>
+
+  <!-- Handle curves -->
+  <path d="M180 320 Q170 310 180 300" stroke="#424242" stroke-width="8" fill="none"/>
+  <path d="M332 320 Q342 310 332 300" stroke="#424242" stroke-width="8" fill="none"/>
+
+  <!-- App name -->
+  <text x="256" y="460" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="24" font-weight="bold">CHEF SUITE</text>
+  <text x="256" y="485" text-anchor="middle" fill="rgba(255,255,255,0.8)" font-family="Arial, sans-serif" font-size="14">PROFESSIONAL</text>
+</svg>
